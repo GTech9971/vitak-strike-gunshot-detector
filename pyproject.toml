@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "gunshot-detector"
+version = "0.1.0"
+description = "Model training for detecting model gun firing sounds"
+authors = ["gtech9971@gmail.com"]
+packages = [{ include = "vital-strike-gunshoot-detector", from = "src" }]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+numpy = "^1.24"
+scipy = "^1.10"
+pandas = "^2.2"
+librosa = "^0.10"
+scikit-learn = "^1.3"
+matplotlib = "^3.7"
+onnx = "^1.15"
+onnxruntime = "^1.16"
+tensorflow = "^2.10.1"
+torch = "^2.1.0"       # M1最適化版を使う場合
+
+[tool.poetrygroup.dev.dependencies]
+ipykernel = "^6.25"
+jupyter = "^1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
